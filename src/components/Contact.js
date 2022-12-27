@@ -26,7 +26,7 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("personal-portfolio-ngi19bvu7-boguita.vercel.app",
+    let response = await fetch("https://personal-portfolio-d1zmzdd1r-boguita.vercel.app/",
       {
         method: "POST",
         headers: {
