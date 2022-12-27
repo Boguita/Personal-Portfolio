@@ -263,7 +263,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
  /*********** Banner Css ***********/
 .banner {
   margin-top: 0;
-  padding: 300px 0 100px 0;
+  padding: 200px 0 100px 0;
   background-image: linear-gradient(to bottom,
       rgba(20, 20, 20, 0.74),
       rgba(109, 105, 112, 0.5)), url(./assets/img/banner1.jpg);
@@ -283,8 +283,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: inline-block;
 }
 
-.banner h1 {
-  height: 2em;
+.banner h1 {  
   font-size: 65px;
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -311,7 +310,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: center;
 }
 
-.banner button svg {
+.banner button svg {  
   font-size: 25px;
   margin-left: 10px;
   transition: 0.3s ease-in-out;
@@ -324,6 +323,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .banner img {
   animation: updown 3s linear infinite;
+  min-height: 100px;
+  max-width:500px;
 }
 
 @keyframes updown {
@@ -346,7 +347,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Skills Css ************/
 .skill {
-  padding: 0 0 50px 0;
+  padding: 50px 0 100px 0;
   position: relative;
 }
 
@@ -390,8 +391,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
+
 /************ Projects Css ************/
-/* .project {
+ .project {
   padding: 80px 0;
   position: relative;
   background-color: black;
@@ -533,10 +535,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 35%;
   right: 0;
   z-index: -4;
-} */
-
-/************ Projects Css ************/
-/* .contact {
+} 
+.animate__animated.animate__slideInUp {
+  animation-duration: 2s;
+}
+/************ Contact Css ************/
+ .contact {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
   padding: 60px 0 200px 0;
 }

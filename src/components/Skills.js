@@ -5,6 +5,7 @@ import meter1 from "../assets/img/meter1.svg";
 import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
 import colorSharp from "../assets/img/color-sharp.png"
+import TrackVisibility from "react-on-screen";
 
 export const Skills = () => {
   const responsive = {
@@ -31,8 +32,11 @@ export const Skills = () => {
     <section className="skill" id="skills">
       <Container>
         <Row>
+        <TrackVisibility>
+              {({ isVisible }) => (
+                <div className={isVisible ? "animate__animated animate__pulse animate__slower" : ""}>
           <Col>
-            <div className="skill-bx">
+            <div className="skill-bx">            
               <h2>
                 Skills
               </h2>
@@ -54,9 +58,12 @@ export const Skills = () => {
                   <img src={meter1} alt="image" />
                   <h5>Soft Skills</h5>
                 </div>
-              </Carousel>
+              </Carousel>             
             </div>
           </Col>
+           </div>
+              )}
+            </TrackVisibility>
         </Row>
       </Container>
       <img className="background-image-left" src={colorSharp} alt="image-background" />
