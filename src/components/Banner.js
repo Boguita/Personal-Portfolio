@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from '../assets/img/personajeEDIT.png';
+import headerImg from '../assets/img/header-img.svg';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = [ "Full Stack Developer", "QA Tester" ];
+  const toRotate = [ "Full Stack Developer"];
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);  
   const period = 2000;
@@ -43,15 +43,26 @@ const tick = () => {
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
             <span className="tagline">Welcome to my Portfolio</span>
-              <h1>{`Hi, i'm Heber, `}<span className="wrap">{text}</span></h1>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ea dolor soluta nesciunt dicta repellendus consectetur praesentium maxime nemo impedit, eaque ipsa aliquid autem perferendis maiores perspiciatis culpa dolorum.</p>
-              <button onClick={() => console.log('Connect')}>Lets connect<ArrowRightCircle size={25}/></button>
-          </Col> 
+            <h1>
+              {`Hi, i'm Heber, `}
+              <span className="wrap">{text}</span>
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate ea dolor soluta nesciunt dicta repellendus consectetur
+              praesentium maxime nemo impedit, eaque ipsa aliquid autem
+              perferendis maiores perspiciatis culpa dolorum.
+            </p>
+            <button onClick={() => console.log("Connect")}>
+              Let’s connect
+              <ArrowRightCircle size={25} />
+            </button>
+          </Col>
           <Col xs={12} md={6} xl={5}>
             <img src={headerImg} alt={"Header Img"} />
           </Col>
         </Row>
-      </Container>        
+      </Container>
     </section>
-  )
+  );
 }

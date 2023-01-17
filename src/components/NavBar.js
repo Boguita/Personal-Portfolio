@@ -27,30 +27,77 @@ export const NavBar = () => {
   }
 
   return (
-      <Navbar expand="md" className={scrolled ? "scrolled": ""}>
-        <Container>
-          <Navbar.Brand href="#home">
-            <img className="logo" src={logo} alt="logo" />
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav"> 
-            <span className="navbar-toggler-icon"></span> 
-          </Navbar.Toggle>
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-              <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-              <Nav.Link href="#project" className={activeLink === 'project' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('project')}>Projects</Nav.Link>
-            </Nav>
-            <span className="navbar-text">
-                <div className= "social-icon">
-                 <a href="https://www.linkedin.com/in/heberd%C3%A9nisgomez/" rel="noopener" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
-                 <a href="https://www.instagram.com/hebergomezz/" rel="noopener" target="_blank"><i className="fa-brands fa-instagram"></i></a>
-                 <a href="https://github.com/Boguita" rel="noopener" target="_blank"><i className="fa-brands fa-github"></i></a>
-                </div>
-                <button className="vvd" onClick={() => console.log('connect')}><span>Let’s Connect</span> </button>
-              </span>
-          </Navbar.Collapse>
-        </Container>
+    <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+      <Container>
+        <Navbar.Brand href="#home">
+          <img className="logo" src={logo} alt="logo" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav">
+          <span className="navbar-toggler-icon"></span>
+        </Navbar.Toggle>
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <Nav.Link
+              href="#home"
+              className={
+                activeLink === "home" ? "active navbar-link" : "navbar-link"
+              }
+              onClick={() => onUpdateActiveLink("home")}
+            >
+              Home
+            </Nav.Link>
+            <Nav.Link
+              href="#skills"
+              className={
+                activeLink === "skills" ? "active navbar-link" : "navbar-link"
+              }
+              onClick={() => onUpdateActiveLink("skills")}
+            >
+              Skills
+            </Nav.Link>
+            <Nav.Link
+              href="#project"
+              className={
+                activeLink === "project" ? "active navbar-link" : "navbar-link"
+              }
+              onClick={() => onUpdateActiveLink("project")}
+            >
+              Projects
+            </Nav.Link>
+          </Nav>
+          <span className="navbar-text">
+            <div className="social-icon">
+              <a
+                href="https://www.linkedin.com/in/heberd%C3%A9nisgomez/"
+                rel="noopener"
+                target="_blank"
+              >
+                <i className="fa-brands fa-linkedin"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/hebergomezz/"
+                rel="noopener"
+                target="_blank"
+              >
+                <i className="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://github.com/Boguita"
+                rel="noopener"
+                target="_blank"
+              >
+                <i className="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <button
+              className="vvd"
+              onClick={() => onUpdateActiveLink("contact")}
+            >
+              <span>Let’s Connect</span>{" "}
+            </button>
+          </span>
+        </Navbar.Collapse>
+      </Container>
     </Navbar>
-  )
+  );
 }
