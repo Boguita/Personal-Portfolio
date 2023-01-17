@@ -78,7 +78,7 @@ export const Projects = () => {
                     <Tab.Content
                       id="slideInUp"
                       className={
-                        isVisible ? "animate__animated animate__slideInUp" : ""
+                        isVisible ? "animate__animated animate__fadeIn" : ""
                       }
                     >
                       <Tab.Pane eventKey="first">
