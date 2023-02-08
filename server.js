@@ -14,6 +14,7 @@ console.log(process.env.EMAIL_USER);
 console.log(process.env.EMAIL_PASS);
 
 const contactEmail = nodemailer.createTransport({
+  host: "https://personal-portfolio-boguita.vercel.app/",
   service: "gmail",
   auth: {
     user: "hebergomez1998@gmail.com",
