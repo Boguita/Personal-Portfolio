@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
-import { Navbar, Container, Nav } from 'react-bootstrap';
-import logo from '../assets/img/logocolor3.png';
-
+import { Navbar, Container, Nav } from "react-bootstrap";
+import logo from "../assets/img/logo.png";
 
 export const NavBar = () => {
-
-  const [activeLink, setActiveLink] = useState('home');
+  const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -13,24 +11,24 @@ export const NavBar = () => {
       if (window.scrollY > 50) {
         setScrolled(true);
       } else {
-        setScrolled(false);        
-    } 
-  }
+        setScrolled(false);
+      }
+    };
 
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll);
 
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [])
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
-  }
+  };
 
   return (
     <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="#home">
-          <img className="logo" src={logo} alt="logo" />
+          <img className="logo" src={logo} alt="logo Heber Gomez" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
@@ -89,15 +87,19 @@ export const NavBar = () => {
                 <i className="fa-brands fa-github"></i>
               </a>
             </div>
-            <button
-              className="vvd"
-              onClick={() => onUpdateActiveLink("contact")}
+            <Nav.Link
+              href="#contacts"
+              className={
+                activeLink === "contacts" ? "active navbar-link" : "navbar-link"
+              }
             >
-              <span>Let’s Connect</span>{" "}
-            </button>
+              <button onClick={() => onUpdateActiveLink("contacts")}>
+                <span>Let’s Connect</span>{" "}
+              </button>
+            </Nav.Link>
           </span>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
-}
+};
