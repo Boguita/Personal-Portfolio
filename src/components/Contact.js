@@ -4,7 +4,7 @@ import contactImg from "../assets/img/contact-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { useRef } from "react";
-import  emailjs from "emailjs-com";
+import  emailjs, { sendForm } from "emailjs-com";
 
 export const Contact = () => { 
   const [buttonText, setButtonText] = useState("Send");
@@ -14,20 +14,21 @@ export const Contact = () => {
 
     const sendEmail = (e) => {
       e.preventDefault();
-      setButtonText("Sending...");
-      emailjs.sendForm("service_8ieu3ju", "template_av5jiio", form.current, "ei5ESvQ3CVOQXbFuL")
-     };     
-
-    setButtonText("Send");    
-    
-    if (sendEmail == 200) {
-      setStatus({ succes: true, message: "Message sent successfully" });
-    } else {
-      setStatus({
-        succes: false,
-        message: "Something went wrong, please try again later.",
-      });
-
+      setButtonText("Sending...");      
+      emailjs.sendForm(
+        "service_8ieu3ju",
+        "template_av5jiio",
+        form.current,
+        "ei5ESvQ3CVOQXbFuL")
+        .then(function(response) {
+       setStatus({ succes: true, message: "Message sent successfully" });
+       setButtonText("Send");
+       e.target.reset();       
+      }, function(error) {
+        setStatus({succes: false, message: "Something went wrong, please try again later."});
+    })            
+  }
+      
   return (
     <section className="contact" id="connect">
       <Container>
@@ -54,7 +55,7 @@ export const Contact = () => {
                   }
                 >
                   <h2>Get In Touch</h2>
-                  <form ref={form} onSubmit={sendEmail}>
+                  <form ref={form} onSubmit={sendEmail} >
                     <Row>
                       <Col size={12} sm={6} className="px-1">
                         <input
@@ -114,6 +115,5 @@ export const Contact = () => {
         </Row>
       </Container>
     </section>
-  );
- };
+  ); 
 }

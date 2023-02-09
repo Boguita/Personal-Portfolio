@@ -43,9 +43,7 @@ export const Projects = () => {
       imgUrl: projImg3,
     },
   ];
-  const handleClickProj = () => {
-
-  };
+ 
   return (
     <section className="project" id="project">
       <Container>
