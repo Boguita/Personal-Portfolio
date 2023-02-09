@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
-const port = 80 || 5000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => console.log("Server Running in port " + port));
 console.log(process.env.EMAIL_USER);
 console.log(process.env.EMAIL_PASS);
@@ -27,6 +27,10 @@ contactEmail.verify((error) => {
   } else {
     console.log("Ready to Send");
   }
+});
+
+router.get('/hola', (req, res) => {
+  res.send('<h2>Welcome</h2>')
 });
 
 router.post("/contact", (req, res) => {
