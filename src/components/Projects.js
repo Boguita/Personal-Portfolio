@@ -11,14 +11,16 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Invoice App",
+      description: "Development. Status: In progress",
       imgUrl: projImg1,
+      url: "https://github.com/nsdonato/front-invoices",
     },
     {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg2,
+      url: "https://github.com/nsdonato/front-invoices",
     },
     {
       title: "Business Startup",
@@ -28,7 +30,7 @@ export const Projects = () => {
     {
       title: "Business Startup",
       description: "Design & Development",
-      imgUrl: projImg1,
+      imgUrl: projImg2,
     },
     {
       title: "Business Startup",
@@ -41,7 +43,9 @@ export const Projects = () => {
       imgUrl: projImg3,
     },
   ];
+  const handleClickProj = () => {
 
+  };
   return (
     <section className="project" id="project">
       <Container>
@@ -49,15 +53,13 @@ export const Projects = () => {
           <Col size={12}>
             <TrackVisibility partialVisibility>
               {({ isVisible }) => (
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                <div
+                  className={
+                    isVisible ? "animate__animated animate__fadeIn" : ""
+                  }
+                >
                   <h2>Projects</h2>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industrys
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </p>
+                  <p>Most recent projects</p>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav
                       variant="pills"
@@ -74,7 +76,7 @@ export const Projects = () => {
                         <Nav.Link eventKey="third">Tab 3</Nav.Link>
                       </Nav.Item>
                     </Nav>
-                    
+
                     <Tab.Content
                       id="slideInUp"
                       className={
@@ -84,27 +86,20 @@ export const Projects = () => {
                       <Tab.Pane eventKey="first">
                         <Row>
                           {projects.map((project, index) => {
-                            return <ProjectCard key={index} {...project} />;
+                            return (
+                              <ProjectCard                           
+                                key={index}
+                                {...project}
+                              />
+                            );
                           })}
                         </Row>
                       </Tab.Pane>
-                      <Tab.Pane eventKey="section">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
-                        </p>
+                      <Tab.Pane eventKey="second">
+                        <p>Coming soon...</p>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
-                        </p>
+                        <p>Coming soon...</p>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>

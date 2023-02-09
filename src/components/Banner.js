@@ -48,10 +48,7 @@ const tick = () => {
               <span className="wrap">{text}</span>
             </h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Cupiditate ea dolor soluta nesciunt dicta repellendus consectetur
-              praesentium maxime nemo impedit, eaque ipsa aliquid autem
-              perferendis maiores perspiciatis culpa dolorum.
+              I am a systems engineering student, I have been studying programming and creating personal projects for a year. I have decided to take the plunge and launch myself into my first job! I hope you enjoy my portfolio as it was made with a lot of love.
             </p>
             <button onClick={() => console.log("Connect")}>
               Let’s connect
