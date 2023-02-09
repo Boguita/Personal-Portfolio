@@ -638,9 +638,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: #FFFFFF;
   border-radius: 55px;
   color: #121212;
-  padding: 85px 125px;
+  padding: 65px 25px;
   margin-bottom: 80px;
-  margin-top: -122px;
+  margin-top: -100px;
 }
 
 .newsletter-bx h3 {
@@ -650,7 +650,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .new-email-bx {
-  background: #fff;
+  background: #fff;  
   padding: 5px;
   border-radius: 20px;
   position: relative;
