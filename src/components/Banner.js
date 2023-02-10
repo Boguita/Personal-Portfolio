@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from '../assets/img/header-img.svg';
+import TrackVisibility from "react-on-screen";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -40,28 +41,38 @@ const tick = () => {
   return (
     <section className="banner" id="home">
       <Container>
-        <Row className="align-items-center">
-          <Col xs={12} md={6} xl={7}>
-            <span className="tagline">Welcome to my Portfolio</span>
-            <h1>
-              {`Hi, i'm Heber, `}
-              <span className="wrap">{text}</span>
-            </h1>
-            <p>
-              I am a systems engineering student, I have been studying
-              programming and creating personal projects for a year. I have
-              decided to take the plunge and launch myself into my first job! I
-              hope you enjoy my portfolio as it was made with a lot of love.
-            </p>
-            <button >
-              Let’s connect
-              <ArrowRightCircle size={25} />
-            </button>
-          </Col>
-          <Col xs={12} md={6} xl={5}>
-            <img src={headerImg} alt={"Header Img"} />
-          </Col>
-        </Row>
+        <TrackVisibility partialVisibility>
+        {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible ? "animate__animated animate__fadeIn" : ""
+                  }
+                >
+          <Row className="align-items-center">
+            <Col xs={12} md={6} xl={7}>
+              <span className="tagline">Welcome to my Portfolio</span>
+              <h1>
+                {`Hi, i'm Heber, `}
+                <span className="wrap">{text}</span>
+              </h1>
+              <p>
+                I am a systems engineering student, I have been studying
+                programming and creating personal projects for a year. I have
+                decided to take the plunge and launch myself into my first job!
+                I hope you enjoy my portfolio as it was made with a lot of love.
+              </p>
+              <button>
+                Let’s connect
+                <ArrowRightCircle size={25} />
+              </button>
+            </Col>
+            <Col xs={12} md={6} xl={5}>
+              <img src={headerImg} alt={"Header Img"} />
+            </Col>
+          </Row>
+          </div>
+          )}
+        </TrackVisibility>
       </Container>
     </section>
   );

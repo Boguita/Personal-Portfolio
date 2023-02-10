@@ -94,9 +94,11 @@ nav.navbar {
   z-index: 9999;
   transition: 0.32s ease-in-out;
 }
-
+.logo {
+  min-width: 50px;
+}
 nav.navbar.scrolled {
-  padding: 10px 0;
+  padding: 0px 0;
   background-color: #121212;
 }
 
@@ -281,8 +283,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: inline-block;
 }
 
-.banner h1 {  
-  font-size: 65px;
+.banner h1 { 
+  font-size: calc(2.5em + 1vw);
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1;
