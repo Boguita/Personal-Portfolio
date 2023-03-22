@@ -481,19 +481,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .proj-imgbx {
-  position: relative;
-  aspect-ratio: 3/2;  
+  position: relative; 
+  aspect-ratio: 3/2;
   border-radius: 30px;
   overflow:hidden;
   margin-bottom: 24px;
 }
 
-.proj-imgbx img{
-  display: flex;  
-  object-fit:inherit;  
+.proj-imgbx img {
+  display: flex;
+  object-fit: inherit;
   width: 100%;
   height: 100%;
 }
+
+
 .proj-imgbx::before {
   content: "";
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
@@ -505,7 +507,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .proj-imgbx:hover::before {
-  height: 100%;
+  height: 100%;  
 }
 
 .proj-txtx {

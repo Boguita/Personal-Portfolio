@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { ArrowRightCircle, Download } from "react-bootstrap-icons";
+import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from '../assets/img/header-img.svg';
 import TrackVisibility from "react-on-screen";
 
@@ -60,7 +60,7 @@ const tick = () => {
                     first job! I hope you enjoy my portfolio as it was made with
                     a lot of love.
                   </p>
-                  <a href="./assets/download/MyCV" download>
+                  <a href="./assets/download/MyCV.pdf" download>
                     <button>
                       Download My CV
                       <ArrowRightCircle size={25} />
