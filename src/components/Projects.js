@@ -1,6 +1,6 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg2 from "../assets/img/project-img2.png";
+import uatre from "../assets/img/uatre.webp";
 import projImg3 from "../assets/img/project-img3.png";
 import invoiceapp from "../assets/img/invoice-app.png";
 import tictactoe from "../assets/img/Tic-tac-toe.png";
@@ -14,10 +14,10 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Invoice App",
-      description: "Development. Status: In progress",
-      imgUrl: invoiceapp,
-      url: "https://github.com/nsdonato/front-invoices",
+      title: "UATRE App (Flutter)",
+      description: "Design & Development",
+      imgUrl: uatre,
+      url: "https://play.google.com/store/apps/details?id=com.galgo.uatre&hl=es_AR&gl=US",
     },
     {
       title: "Gym Project",
@@ -29,23 +29,19 @@ export const Projects = () => {
       title: "Travel web",
       description: "Design & Development",
       imgUrl: travelweb,
-      url: "https://travel-web-efpk.vercel.app/"
+      url: "https://travel-web-efpk.vercel.app/",
     },
     {
       title: "Funny Game",
       description: "Design & Development",
       imgUrl: tictactoe,
-      url: "https://tic-tac-toe-zeta-lemon.vercel.app/"
-    },
+      url: "https://tic-tac-toe-zeta-lemon.vercel.app/",
+    },    
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
+      title: "Invoice App",
+      description: "Development. Status: In progress",
+      imgUrl: invoiceapp,
+      url: "https://github.com/nsdonato/front-invoices",
     },
   ];
  
