@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from '../assets/img/header-img.svg';
 import TrackVisibility from "react-on-screen";
-
+import pdf from "../assets/download/Heber Dénis Gomez.pdf";
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -75,7 +75,10 @@ const tick = () => {
                     first job! I hope you enjoy my portfolio as it was made with
                     a lot of love.
                   </p>
-                  <a href="./assets/download/MyCV.pdf" download>
+                  <a
+                    href={pdf}
+                    download
+                  >
                     <button>
                       Download My CV
                       <ArrowRightCircle size={25} />
