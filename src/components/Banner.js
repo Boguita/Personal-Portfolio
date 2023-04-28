@@ -12,6 +12,21 @@ export const Banner = () => {
   const [delta, setDelta] = useState(300 - Math.random() * 100);  
   const period = 2000;
   
+const onClick = () => {
+  // using Java Script method to get PDF file
+  fetch("SamplePDF.pdf").then((response) => {
+    response.blob().then((blob) => {
+      // Creating new object of PDF file
+      const fileURL = window.URL.createObjectURL(blob);
+      // Setting various property values
+      let alink = document.createElement("a");
+      alink.href = fileURL;
+      alink.download = "SamplePDF.pdf";
+      alink.click();
+    });
+  });
+};
+
 useEffect(() => {
   let ticker = setInterval(() => {
     tick();
