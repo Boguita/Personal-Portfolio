@@ -15,18 +15,26 @@ export const Contact = () => {
     const sendEmail = (e) => {
       e.preventDefault();
       setButtonText("Sending...");      
-      emailjs.sendForm(
-        "service_8ieu3ju",
-        "template_av5jiio",
-        form.current,
-        "ei5ESvQ3CVOQXbFuL")
-        .then(function(response) {
-       setStatus({ succes: true, message: "Message sent successfully" });
-       setButtonText("Send");
-       e.target.reset();       
-      }, function(error) {
-        setStatus({succes: false, message: "Something went wrong, please try again later."});
-    })            
+      emailjs
+        .sendForm(
+          "service_8x8zqgm",
+          "template_av5jiio",
+          form.current,
+          "ei5ESvQ3CVOQXbFuL"
+        )
+        .then(
+          function (response) {
+            setStatus({ succes: true, message: "Message sent successfully" });
+            setButtonText("Send");
+            e.target.reset();
+          },
+          function (error) {
+            setStatus({
+              succes: false,
+              message: "Something went wrong, please try again later.",
+            });
+          }
+        );            
   }
       
   return (

@@ -69,16 +69,15 @@ const tick = () => {
                     <span className="wrap">{text}</span>
                   </h1>
                   <p>
-                    I am a systems engineering student, I have been studying
-                    programming and creating personal projects for a year. I
-                    have decided to take the plunge and launch myself into my
-                    first job! I hope you enjoy my portfolio as it was made with
-                    a lot of love.
+                    I am a Systems Engineering student with 2 years of
+                    experience programming and working on various freelance
+                    projects. During this time, I have gained valuable
+                    experience and developed several personal projects. I am
+                    excited to take the next step in my professional career. I
+                    hope you enjoy my portfolio, which was made with a lot of
+                    love!
                   </p>
-                  <a
-                    href={pdf}
-                    download
-                  >
+                  <a href={pdf} download>
                     <button>
                       Download My CV
                       <ArrowRightCircle size={25} />

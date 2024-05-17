@@ -7,12 +7,20 @@ import tictactoe from "../assets/img/Tic-tac-toe.png";
 import evolveGym from "../assets/img/evolve-gym.png";
 import travelweb from "../assets/img/travel-web.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import uatreSystem from "../assets/img/UatreSystem.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
 
   const projects = [
+    {
+      title: "UATRE System FullStack",
+      description: "Design & Leader Development",
+      credentials: "User: test Pass: 123",
+      imgUrl: uatreSystem,
+      url: "https://beneficiosuatre.com.ar",
+    },
     {
       title: "UATRE App (Flutter)",
       description: "Design & Development",
@@ -36,7 +44,7 @@ export const Projects = () => {
       description: "Design & Development",
       imgUrl: tictactoe,
       url: "https://tic-tac-toe-zeta-lemon.vercel.app/",
-    },    
+    },
     {
       title: "Invoice App",
       description: "Development. Status: In progress",
