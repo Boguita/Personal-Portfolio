@@ -1,7 +1,13 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import uatre from "../assets/img/uatre.webp";
+import heybon from "../assets/img/heybon.png";
 import projImg3 from "../assets/img/project-img3.png";
+import aromas from "../assets/img/aromas.png";
+import conectados from "../assets/img/conectados.png";
+import latin from "../assets/img/latin.png";
+import art from "../assets/img/art.png";
+import branded from "../assets/img/branded.png";
 import invoiceapp from "../assets/img/invoice-app.png";
 import tictactoe from "../assets/img/Tic-tac-toe.png";
 import evolveGym from "../assets/img/evolve-gym.png";
@@ -52,6 +58,46 @@ export const Projects = () => {
       url: "https://github.com/nsdonato/front-invoices",
     },
   ];
+
+    const wordpress = [
+      {
+        title: "Agency Website",
+        description: "Design & Development",
+        imgUrl: branded,
+        url: "https://brandedstrong.com/",
+      },
+      {
+        title: "Agency Website",
+        description: "Design & Development",
+        imgUrl: latin,
+        url: "https://latinbranding.com/",
+      },
+      {
+        title: "Conectados Coaching Website",
+        description: "Design & Development",
+        credentials: "Responsive in progress",
+        imgUrl: conectados,
+        url: "https://www.coachvocacionalonline.com/",
+      },
+      {
+        title: "Art Mutual Rural Website",
+        description: "Development",
+        imgUrl: art,
+        url: "https://artmutualrural.org.ar/",
+      },
+      {
+        title: "Aromas de Campo Website",
+        description: "Development",
+        imgUrl: aromas,
+        url: "https://aromasdecamporio3.com.ar/",
+      },
+      {
+        title: "Heybon E-commerce",
+        description: "Development",
+        imgUrl: heybon,
+        url: "https://heybon.com.ar/",
+      },
+    ];
  
   return (
     <section className="project" id="project">
@@ -74,10 +120,10 @@ export const Projects = () => {
                       id="pills-tab"
                     >
                       <Nav.Item>
-                        <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                        <Nav.Link eventKey="first">FullStack Projects</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                        <Nav.Link eventKey="second">Wordpress & Others</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
                         <Nav.Link eventKey="third">Tab 3</Nav.Link>
@@ -93,17 +139,16 @@ export const Projects = () => {
                       <Tab.Pane eventKey="first">
                         <Row>
                           {projects.map((project, index) => {
-                            return (
-                              <ProjectCard                           
-                                key={index}
-                                {...project}
-                              />
-                            );
+                            return <ProjectCard key={index} {...project} />;
                           })}
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
-                        <p>Coming soon...</p>
+                        <Row>
+                          {wordpress.map((wordpress, index) => {
+                            return <ProjectCard key={index} {...wordpress} />;
+                          })}
+                        </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
                         <p>Coming soon...</p>
