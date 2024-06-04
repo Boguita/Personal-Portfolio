@@ -23,7 +23,7 @@ export const Projects = () => {
     {
       title: "UATRE System FullStack",
       description: "Design & Leader Development",
-      credentials: "User: test Pass: 123",
+      credentials: "User: guido.gurfinka@hotmail.com Pass: 123",
       imgUrl: uatreSystem,
       url: "https://beneficiosuatre.com.ar",
     },
